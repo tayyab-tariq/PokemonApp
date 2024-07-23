@@ -27,7 +27,6 @@ namespace TayyabTest.Repository
         }
 
         public ICollection<Pokemon> GetPokemonsByCategory(int categoryId)
-
         {
             return _context.PokemonCategories.Where(e => e.CategoryId == categoryId).Select(c => c.Pokemon).ToList();
         }
